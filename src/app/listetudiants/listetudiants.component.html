@@ -1,0 +1,23 @@
+
+      <h2>Etudiant List</h2>
+  
+      <table >
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let etudiant of etudiants | async">
+            <td>{{etudiant.id}}</td>
+            <td>{{etudiant.fname}}</td>
+            <td>{{etudiant.lname}}</td>
+            <td><button (click)="deleteEtudiant(etudiant.id)" >Delete</button>
+              <button (click)="updateEtudiant(etudiant.id)" >Update</button>
+          </td>
+          </tr>
+        </tbody>
+    </table>
+  

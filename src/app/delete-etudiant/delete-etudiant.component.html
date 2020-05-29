@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="number"  placeholder="Search id"  name="id" [(ngModel)]="id"/>
+                                    <span class="input-group-btn">
+                                        <button type="button" (click)="getEtudiantById()">
+                                          Chercher
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>  </div>
+                        </div>
+                    <div class="container">
+                    <div class="container">
+                        <div class="row col-md-6 col-md-offset-2 custyle">
+                        <table class="table table-striped custab">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Fname</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let etudiant of etudiants">
+                                <td>{{etudiant.id}}</td>
+                                <td>{{etudiant.fname}}</td>
+                                <td>{{etudiant.lname}}</td>
+                                <td class="text-center"><button class="btn btn-danger btn-xs" (click)="delteEtudiant(etudiant.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+                              </tr>
+                        </tbody>
+                        </table>
+                        </div>
+                    </div>
